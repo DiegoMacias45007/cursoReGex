@@ -1,0 +1,23 @@
+El delimitador * hace referencia a cero o muchos (ve y encuentrame todo)PUEDE NO APARECER
+El delimitador + hace referencia a uno o todos  (o sea que busca todos a partir de uno) DEBE DE APARECER
+El delimitador ? hace referencia a cero o uno (o sea solo busca de uno por uno) PUEDE NO APARECER
+
+
+Aqui ya podemos empezar a jugar mas, por ejemplo
+\d+[a-z] = Quiero que me busques cualquier digito sea uno o mas, PERO, que tenga despues una letra de la
+'a' a la 'z'
+
+\d+[a-z][a-z]? = Quiero que me busques si hay un digito o mas, y luego haya o no una letra
+
+Ahora pongamos en ejemplo:
+123456s78910
+12345678910as
+
+Si utilizo \d+[a-z]s\d? estoy diciendo, quiero que haya uno o mas digitos, que despues obligatoriamente
+haya un caracter de la 'a' a la 'z', que despues obligatoriamente haya una s, y que despues haya o no un
+digito
+por lo que, con el texto anterior, no me retornaria nada/
+
+Sin embargo, si le agrego el delimitador ? a la clase [a-z], me retornaria el primer y segundo textos:
+
+\d+[a-z]?s\d?

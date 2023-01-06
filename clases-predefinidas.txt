@@ -1,0 +1,69 @@
+A partir del caracter nacen 3 tipos de clases predefinidas:
+
+El Digito \d (cualquier numero de 0 a 9) [0-9]
+La palabra \w (All word characters, o sea cualquier caracter que componga una  palabra, un numero,
+               mayusculas o minusculas y incluso guiones bajos) [a-zA-Z-0-9_]
+Los espacios \s (White Spaces El espacio normal, el tabulador, doble espacio)
+
+
+1
+12
+123
+1234
+12345
+12345678910
+12345678910a
+hola tambien
+palabra 
+url: https://www.instagram.com/p/BXB4zsUlW5Z/?taken-by=beco.mx
+url: http://instagram.com/p/blablablah
+url: http://itam.mx/test
+http://instagram.com/p/blablablah
+csv1,csv2,csv3,csv4,csv5
+Rodrigo Jiménez Gutiérrez
+5556581111
+56-58-11-12
+302-345-9876
+esto.es.un.mail+gmail@mail.com
+dominio.com
+[LOG ENTRY] [ERROR] The system is unstable
+[LOG ENTRY] [WARN] The system may be down
+[LOG ENTRY] [LOG] Everything is OK
+[LOG ENTRY] [LOG] [user:@beco] Logged in
+[LOG ENTRY] [LOG] [user:@beco] Clicked here
+[LOG ENTRY] [LOG] [user:@beco] Rated the app
+[LOG ENTRY] [LOG] [user:@beco] Logged out
+
+Si utilizo el '.', me buscará uno por uno todos y cada uno de los caracteres.
+Para hacer referencia que quiero buscar algo, utilizo el '\', no el '/'
+Ahora puedo pedirle que busque una cadena con cuantos digitos necesite :
+\d\d\d (me busca de tres digitos en tres digitos)
+
+
+IMPORTANTE , \w no encuentra caracteres especiales ni acentos
+
+
+Existen diferentes formas de buscar, utilizando los corchetes '[]'
+[0-0] me busca todos los digitos del 0 al 9
+[a-z] me busca todos los caracteres de la 'a' a la 'z' solo en MINUSCULAS
+Esto se le llama clases construidas
+
+Asi puedo empezar a mezclar y juntar todos:
+
+[a-zA-Z0-9_] Aqui pedi que buscara de la 'a' a la 'z', del 0 al 9, de la 'A' a la 'Z' y el guion bajo
+
+Ahora existe un termino muy poderoso el cual se llama escapar los caracteres.
+
+Que pasa si quiero buscar el punto, pero el caracter punto, no el punto que denota cualquier caracter?
+
+Pues escapo los caracteres poniendo un '\' antes de el:
+
+[a-fA-F0-9\.] Aqui pedi que buscara de la 'a' a la 'f', de la 'A' a la 'F', del 0 al 9 y el PUNTO
+le pido al sistema que me busque los caracteres 'that comply'
+
+Por ejemplo si quiero buscar los numeros exadecimales, seria asi:
+
+[a-fA-F0-6#]
+
+Sin emabrgo aqui solo buscaria TOOOODOS los que cumplan, no los que cumplan dicho orden de
+#af09d3

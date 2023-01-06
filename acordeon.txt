@@ -1,0 +1,11 @@
+CLASES
+\d = digitos
+\w = caracteres de palabra
+\s = espacios en blanco
+[0-9] Clases construidas ~ \d
+[a-zA-Z0-9_] Clase construida ~\w
+
+DELIMITADORES
+* = Greedy, todos
++ = uno o mas
+? = cero o uno
