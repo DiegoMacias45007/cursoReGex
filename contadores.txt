@@ -1,0 +1,44 @@
+Con regex podemos ser mas precisos y pedir x numero de apariciones de tal digito o palabra o caracter
+
+Para ello utilizamos los contadores: (los cuales son con corchetes redondos)
+
+\d{2,2}
+
+Un contador necesita dos parametros: cuota inferior (minimo de veces), cuota superior (maximo de veces)
+
+Es mejor practica utilizar los dos parametros
+
+Ejemplo: 
+\d{2,5} me hara match de todos los liners que contengan 2, 3, 4, y 5 digitos
+Esto permite ser mas especifico
+
+Si queremos por ejemplo que un username sea de ciertos caracteres nada mas:
+
+\w{4,15}, aqui hemos pedido que sean entre 4 y 15 caracteres
+
+Podemos hacerlo sin cuota superior, haciendo que busque de x o mas:
+
+\d{4,} Aqui hemos pedido que nos busque 4 digitos o mas, siendo una extension de los delimitadores
+
+Ejemplo, si quiero buscar un numero de telefono sin importar como este escrito podemos hacerlo de 
+dos formas diferentes:
+
+\d{2,2}[\.\-]?\d{2,2}[\.\-]?\d{2,2}[\.\-]?\d{2,2}[\.\-]?\d{2,2}[\.\-]?
+
+ESta es una forma que es larga y confusa, pidiendo que busque dos digitos, y luego puede o no haber un
+'.' o un '-', y asi 5 veces
+Sin embargo es muy largo, por lo que podemos englobar solo esa frase y pedir que la repita x cantidad
+de veces utilizando '()':
+
+(\d{2,2}[\.\-]?){5,5}
+
+Aqui simplifique la primera expresion por muchisimo, ya que solamente pedi que me repitiera ese patron 
+5 veces 
+Sin embargo, esa expresion solo me va a limitar a ciertos formatos de numero de telefono
+
+Por lo que seria mejor hacerlo asi:
+
+(\d{2,4[\.\-]?}){3,5}
+
+Aqui he dicho que busque entre 2 o 4 digitos que despues pueden o no tener '.' o '-', y que se repita
+3, 4, o 5 veces

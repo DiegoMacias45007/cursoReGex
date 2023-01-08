@@ -9,3 +9,7 @@ DELIMITADORES
 * = Greedy, todos
 + = uno o mas
 ? = cero o uno
++? = Todas las ocurrencias lo mas pequeñas posibles
+
+CONTADORES
+{min,max}

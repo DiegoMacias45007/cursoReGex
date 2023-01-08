@@ -1,0 +1,20 @@
+Cuando '?' se utiliza solo busca la ocurrencia cero o uno.
+Ahora, si es precedido por un '+', este se convierte en un delimitador lazy:
+
+Hazme los matches mas pequeños posibles:
+
+Ejemplo:
+csv1,csv2,csv3,csv4,csv5
+
+Si pongo En el buscador que me busque .*, 
+Me va a buscar toooodo lo que haya precedido antes de la coma:
+
+csv1,csv2,csv3,csv4,
+
+Ahora si pongo .+?, 
+me buscara el match mas corto que me haga de todo antes de una coma, y asi sucesivamente
+
+csv1,
+csv2,
+csv3,
+csv4,
