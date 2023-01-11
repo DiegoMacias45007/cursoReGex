@@ -38,7 +38,7 @@ Sin embargo, esa expresion solo me va a limitar a ciertos formatos de numero de 
 
 Por lo que seria mejor hacerlo asi:
 
-(\d{2,4[\.\-]?}){3,5}
+(\d{2,4}[\.\-]?){3,5}
 
 Aqui he dicho que busque entre 2 o 4 digitos que despues pueden o no tener '.' o '-', y que se repita
 3, 4, o 5 veces

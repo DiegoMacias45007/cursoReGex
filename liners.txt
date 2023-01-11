@@ -7,15 +7,19 @@
 12345678910sa
 hola tambien
 palabra 
-url: https://www.instagram.com/p/BXB4zsUlW5Z/?taken-by=beco.mx
-url: http://instagram.com/p/blablablah
-url: http://itam.mx/test
+https://www.instagram.com/p/BXB4zsUlW5Z/?taken-by=beco.mx
+http://instagram.com/p/blablablah
+http://itam.mx/test
 http://instagram.com/p/blablablah
 csv1,csv2,csv3,csv4,csv5
+1234, 543, 789
+192, 023, 910
+csv1, csv2, csv3
+p102, 10203, 3920, 02020
 Rodrigo Jiménez Gutiérrez
 5556581111
 56-58-11-12-22
-302-345-9876
+302y345x9876
 +52 33 3946 8744
 esto.es.un.mail+gmail@mail.com
 dominio.com

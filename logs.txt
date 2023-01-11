@@ -1,0 +1,21 @@
+[LOG ENTRY] [ERROR] The system is unstable
+[LOG ENTRY] [WARN] The system may be down
+[LOG ENTRY] [LOG] Everything is OK
+[LOG ENTRY] [LOG] [user:@beco] Logged in
+[LOG ENTRY] [LOG] [user:@beco] Clicked here
+[LOG ENTRY] [LOG] [user:@celismx] Did something
+[LOG ENTRY] [LOG] [user:@beco] Rated the app
+[LOG ENTRY] [LOG] [user:@beco] Logged out
+[LOG ENTRY] [LOG] [user:@celismx] Logged in
+
+Si quisiera encontrar solamente los LOG de warn:
+
+^\[LOG.*\[WARN.*$ 
+
+Si quisiera solo encontrar lo que hizo celis:
+
+^\[LOG.*\[LOG.*\[user:@celismx\] .*$
+
+
+NOTA URLS:
+^https?://\w+.\w+.\w/?.*$

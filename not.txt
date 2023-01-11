@@ -1,0 +1,18 @@
+El caracter '^' significa NOT, y este se pone dentro de una nueva clase y hara que busque todo lo que no
+se encuentre en esa clase:
+
+[^0-5a-c] = [4-9d-z]
+ANTICLASES
+Sirve para ignorar
+
+Esto permite simplificar expresiones:
+(\d{2,4}[\.\-]?){3,5}
+
+Para quitar el [\.\-]?
+solo haria:
+
+(\d{2,4}\D?){3,5} y seria lo mismo
+
+Para filtrar los numeros de telefono para que lea numeros SIN letras seria asi:
+
+(\d+[^aA-zZ]){2,6}

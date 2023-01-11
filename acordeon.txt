@@ -5,6 +5,11 @@ CLASES
 [0-9] Clases construidas ~ \d
 [a-zA-Z0-9_] Clase construida ~\w
 
+INVERSOS DE CLASES
+\D = Todo lo que no sea un digito
+\W = Todo lo que no sea un caracter de palabra
+\S = Todo lo que no sea un espacio en blanco
+
 DELIMITADORES
 * = Greedy, todos
 + = uno o mas
@@ -13,3 +18,12 @@ DELIMITADORES
 
 CONTADORES
 {min,max}
+
+NOT
+^ = No me leas los caracteres que ponga dentro de la clase con este signo
+
+INICIO Y FIN DE LINEA
+
+^ = Inicio de linea
+$ = Fin de linea
+

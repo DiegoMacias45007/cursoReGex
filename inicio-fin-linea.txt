@@ -1,0 +1,44 @@
+Por medio de los caracteres '^' y '$' podemos decirle al programa que nos busque POR LINEAS, 
+evitando que haya matches repetidos y nos busque exactamente lo que queremos que busque:
+
+^inicio linea
+$Final de linea:
+
+^\d& Nos va a buscaer SOLAMENTE LAS LINEAS que tengan UN SOLO DIGITO
+
+La diferencia de '^' como inicio de linea y como NOT es que el de NOT se encuentra 
+DENTRO DE UNA CLASE
+
+EJEMPLO, de estas lineas, quiero que solo me encuentre la linea 13 y la 18:
+3rgergwg0
+354656546
+aa
+3
+3
+3$%^%$^$%78
+
+SOLUCION:
+^\d[aA-zZ%\$\^]+\w[\d{1,2}]$
+
+
+
+
+\d = Un digito
+[aA-zZ%\$\^]+ = alguna letra de la 'aA-zZ', los simbolos '%', '^', '$' una o mas veces
+\w = Un caracter de palabra 
+[\d{1,2}] = Uno o dos digitos
+
+
+EJEMPLO 2
+Quiero que me busque con las regex solamente las lineas que tengan x caracteres y despues una coma
+3 veces:
+1234,543,789
+192,023,910
+csv1,csv2,csv3
+p102,10203,3920,02020
+
+SOLUCION:
+
+^(\w+,?){3}$
+
+O hace match tal cual con la linea, o lo descarta
